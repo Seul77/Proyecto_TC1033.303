@@ -10,16 +10,16 @@ using namespace std;
 int main() {
     int tipoPlanta = 0;
 
-    Carnivora plantaCarnivora1("Venus atrapamoscas", "Dionaea muscipula", 3, false, 15.99, "Trampa de mandíbula");
-    Carnivora plantaCarnivora2("Rocio del sol", "Drosera capensis", 2, false, 12.50, "Trampa pegajosa");
-    Carnivora plantaCarnivora3("Planta jarro", "Nepenthes alata", 4, false, 25.00, "Trampa de jarra");
+    Carnivora plantaCarnivora1("Venus atrapamoscas", "Dionaea muscipula", 3, false, 299.99, "Trampa de mandíbula");
+    Carnivora plantaCarnivora2("Rocio del sol", "Drosera capensis", 2, false, 150.00, "Trampa pegajosa");
+    Carnivora plantaCarnivora3("Planta jarro", "Nepenthes alata", 4, false, 450.50, "Trampa de jarra");
     CarnivoraCuidados cuidadosCarnivora1(3, "Sustrato pobre en nutrientes", 22.5, "Pequeño", 5);
     CarnivoraCuidados cuidadosCarnivora2(4, "Musgo sphagnum", 24.0, "Mediano", 7);
     CarnivoraCuidados cuidadosCarnivora3(2, "Turba y arena", 20.0, "Grande", 4);
 
-    CactusInfo plantaCactus1("Barril de oro", "Echinocactus grusonii", 5, false, 30.00, 12.0);
-    CactusInfo plantaCactus2("Nopal", "Opuntia ficus-indica", 3, false, 22.50, 8.0);
-    CactusInfo plantaCactus3("Biznaga elongada", "Mammillaria elongata", 4, false, 18.00, 10.0);
+    CactusInfo plantaCactus1("Barril de oro", "Echinocactus grusonii", 5, false, 99.99, 12.0);
+    CactusInfo plantaCactus2("Nopal", "Opuntia ficus-indica", 3, false, 49.99, 8.0);
+    CactusInfo plantaCactus3("Biznaga elongada", "Mammillaria elongata", 4, false, 120.00, 10.0);
     CactusCuidados cuidadosCactus1(1, "Tierra arenosa", 28.0, 8.0, false);
     CactusCuidados cuidadosCactus2(2, "Mezcla de tierra para cactus", 26.0, 6.0, true);
     CactusCuidados cuidadosCactus3(1, "Sustrato bien drenado", 30.0, 7.0, false);
@@ -63,7 +63,8 @@ int main() {
         }
             cout << "¿Qué información desea ver?\n"
                  << "1. Información de la planta\n"
-                 << "2. Cuidados de la planta\n";
+                 << "2. Cuidados de la planta\n"
+                 << "3. Hacer un pedido\n";
             int infoSeleccionada;
             cin >> infoSeleccionada;
             if (infoSeleccionada == 1) {
@@ -76,6 +77,10 @@ int main() {
                 else if (plantaSeleccionada == 3) {
                     plantaCarnivora3.mostrarInfo();
                 }
+                else {
+                    cout << "Opción no válida.\n";
+                    return 0;
+                }
             }
             else if (infoSeleccionada == 2) {
                 if (plantaSeleccionada == 1) {
@@ -87,6 +92,48 @@ int main() {
                 else if (plantaSeleccionada == 3) {
                     cuidadosCarnivora3.mostrarCuidados();
                 }
+                else {
+                    cout << "Opción no válida.\n";
+                    return 0;
+                }
+            }
+            else if (infoSeleccionada == 3) {
+                double cantidad;
+                cout << "El precio por unidad es de: $";
+                if (plantaSeleccionada == 1) {
+                    cout << plantaCarnivora1.getPrecio() << endl;
+                }
+                else if (plantaSeleccionada == 2) {
+                    cout << plantaCarnivora2.getPrecio() << endl;
+                }
+                else if (plantaSeleccionada == 3) {
+                    cout << plantaCarnivora3.getPrecio() << endl;
+                }
+                else {
+                    cout << "Opción no válida.\n";
+                    return 0;
+                }
+                cout << "Ingrese la cantidad que desea pedir: ";
+                cin >> cantidad;
+                double precioTotal = 0.0;
+                if (plantaSeleccionada == 1) {
+                    precioTotal = plantaCarnivora1.getPrecio() * cantidad;
+                }
+                else if (plantaSeleccionada == 2) {
+                    precioTotal = plantaCarnivora2.getPrecio() * cantidad;
+                }
+                else if (plantaSeleccionada == 3) {
+                    precioTotal = plantaCarnivora3.getPrecio() * cantidad;
+                }
+                cout << "El precio total por " << cantidad << " unidad(es) de " 
+                     << (plantaSeleccionada == 1 ? plantaCarnivora1.getNombre() :
+                         plantaSeleccionada == 2 ? plantaCarnivora2.getNombre() :
+                         plantaCarnivora3.getNombre())
+                     << " es: $" << precioTotal << endl;
+            }
+            else {
+                cout << "Opción no válida.\n";
+                return 0;
             }
         }
     else if (tipoPlanta == 2) {
@@ -114,7 +161,8 @@ int main() {
 
             cout << "¿Qué información desea ver?\n"
                  << "1. Información de la planta\n"
-                 << "2. Cuidados de la planta\n";
+                 << "2. Cuidados de la planta\n"
+                 << "3. Hacer un pedido\n";
             int infoSeleccionada;
             cin >> infoSeleccionada;
             if (infoSeleccionada == 1) {
@@ -127,6 +175,10 @@ int main() {
                 else if (plantaSeleccionada == 3) {
                     plantaCactus3.mostrarInfo();
                 }
+                else {
+                    cout << "Opción no válida.\n";
+                    return 0;
+                }
             }
             else if (infoSeleccionada == 2) {
                 if (plantaSeleccionada == 1) {
@@ -138,6 +190,48 @@ int main() {
                 else if (plantaSeleccionada == 3) {
                     cuidadosCactus3.mostrarCuidados();
                 }
+                else {
+                    cout << "Opción no válida.\n";
+                    return 0;
+                }
+            }
+            else if (infoSeleccionada == 3) {
+                double cantidad;
+                cout << "El precio por unidad es de: $";
+                if (plantaSeleccionada == 1) {
+                    cout << plantaCactus1.getPrecio() << endl;
+                }
+                else if (plantaSeleccionada == 2) {
+                    cout << plantaCactus2.getPrecio() << endl;
+                }
+                else if (plantaSeleccionada == 3) {
+                    cout << plantaCactus3.getPrecio() << endl;
+                }
+                else {
+                    cout << "Opción no válida.\n";
+                    return 0;
+                }
+                cout << "Ingrese la cantidad que desea pedir: ";
+                cin >> cantidad;
+                double precioTotal = 0.0;
+                if (plantaSeleccionada == 1) {
+                    precioTotal = plantaCactus1.getPrecio() * cantidad;
+                }
+                else if (plantaSeleccionada == 2) {
+                    precioTotal = plantaCactus2.getPrecio() * cantidad;
+                }
+                else if (plantaSeleccionada == 3) {
+                    precioTotal = plantaCactus3.getPrecio() * cantidad;
+                }
+                cout << "El precio total por " << cantidad << " unidad(es) de " 
+                     << (plantaSeleccionada == 1 ? plantaCactus1.getNombre() :
+                         plantaSeleccionada == 2 ? plantaCactus2.getNombre() :
+                         plantaCactus3.getNombre())
+                     << " es: $" << precioTotal << endl;
+            }
+            else {
+                cout << "Opción no válida.\n";
+                return 0;
             }
         }
     else if (tipoPlanta == 3) {
@@ -186,6 +280,10 @@ int main() {
                 else if (plantaSeleccionada == 4) {
                     plantaFlor4.mostrarInfo();
                 }
+                else {
+                    cout << "Opción no válida.\n";
+                    return 0;
+                }
             }
             else if (infoSeleccionada == 2) {
                 if (plantaSeleccionada == 1) {
@@ -200,9 +298,30 @@ int main() {
                 else if (plantaSeleccionada == 4) {
                     cuidadosFlor4.mostrarCuidados();
                 }
+                else {
+                    cout << "Opción no válida.\n";
+                    return 0;
+                }
             }
             else if (infoSeleccionada == 3) {
                 double cantidad;
+                cout << "El precio por unidad es de: $";
+                if (plantaSeleccionada == 1) {
+                    cout << plantaFlor1.getPrecio() << endl;
+                }
+                else if (plantaSeleccionada == 2) {
+                    cout << plantaFlor2.getPrecio() << endl;
+                }
+                else if (plantaSeleccionada == 3) {
+                    cout << plantaFlor3.getPrecio() << endl;
+                }
+                else if (plantaSeleccionada == 4) {
+                    cout << plantaFlor4.getPrecio() << endl;
+                }
+                else {
+                    cout << "Opción no válida.\n";
+                    return 0;
+                }
                 cout << "Ingrese la cantidad que desea pedir: ";
                 cin >> cantidad;
                 double precioTotal = 0.0;
@@ -225,7 +344,10 @@ int main() {
                          plantaFlor4.getNombre())
                      << " es: $" << precioTotal << endl;
             }
+            else {
+                cout << "Opción no válida.\n";
+                return 0;
+            }
         }
     return 0; 
 };
-
