@@ -1,0 +1,4 @@
+Re-evaluaciones:
+1. El README fue actualizado con las especificaciones requeridas por el profesor
+2. Las clases fueron modificadas por completo, integrando getters y setters en cada una.
+3. El UML fue reestructurado y actualizado.
