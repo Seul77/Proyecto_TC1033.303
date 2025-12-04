@@ -14,7 +14,3 @@ El programa permite:
 1. Puedes correr el codigo descargando todos los archivos y corriendo el archivo "Invernadero.cpp"
 2. Puedes igualmente correr el codigo descargando todos los archivos y desde la terminal correr el archivo main (Invernadero.cpp)
 
-## Correcciones
-1. Se reescribieron todos los codigos, hice 2 clases madres que heredan a 6 clases hijas que se mandan a llamar en main
-2. El README fue actualizado, agregando consideraciones, funcionalidad, correcciones y ampliando el contexto.
-3. El UML fue actualizado para los nuevos codigos
