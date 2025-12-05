@@ -3,3 +3,4 @@ Re-evaluaciones:
 2. Las clases fueron modificadas por completo, integrando getters y setters en cada una.
 3. El UML fue reestructurado y actualizado. 
 4. Me gustaria tener retroalimentacion temprana para tener todo correcto en los codigos y en el UML para poder alcanzarlo a corregir perfectamente para la entrega final
+5. El README fue actualizado con instrucciones de compilación
