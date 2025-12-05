@@ -11,6 +11,10 @@ El programa permite:
 - se puede hacer pedido de plantas para comprar y despliega el precio
 
 ## Consideraciones
-1. Puedes correr el codigo descargando todos los archivos y corriendo el archivo "Invernadero.cpp"
-2. Puedes igualmente correr el codigo descargando todos los archivos y desde la terminal correr el archivo main (Invernadero.cpp)
+Para compilar el archivo principal, utiliza el siguiente comando:
 
+g++ main.cpp -o app
+
+Luego ejecuta el programa con:
+
+./app
