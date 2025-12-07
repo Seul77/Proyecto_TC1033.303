@@ -2,5 +2,11 @@ Re-evaluaciones:
 1. El README fue actualizado, agregando consideraciones, funcionalidad, correcciones y ampliando el contexto.
 2. Las clases fueron modificadas por completo, integrando getters y setters en cada una.
 3. El UML fue reestructurado y actualizado. 
+
 4. Me gustaria tener retroalimentacion temprana para tener todo correcto en los codigos y en el UML para poder alcanzarlo a corregir perfectamente para la entrega final
 5. El README fue actualizado con instrucciones de compilación
+
+6. El UML fue actualizado, agregando composicion.
+7. Se agrego un nuevo archivo, Planta.h, como composicion a mi proyecto.
+8. Se agregaron comentarios al codigo
+9. Se modifico ligeramente el archivo main (Invernadero.cpp)
