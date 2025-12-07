@@ -1,17 +1,19 @@
-#ifndef PLANTAINFO_H
+#ifndef PLANTAINFO_H          
 #define PLANTAINFO_H
 
-#include <iostream>
-using namespace std;
+#include <iostream>           
+using namespace std;          
 
-class PlantaInfo {
-    protected:
-    string nombre;
-    string nombrecientifico;
-    int edad;
-    bool toxica;
-    double precio;
+class PlantaInfo {            // Clase base para la información de una planta
+    protected:                // Atributos accesibles desde clases hijas
+    string nombre;            // Nombre común de la planta
+    string nombrecientifico;  // Nombre científico
+    int edad;                 // Edad en años
+    bool toxica;              // Indica si es tóxica
+    double precio;            // Precio de la planta
+
     public:
+    // Constructor para inicializar los atributos
     PlantaInfo(string n, string nc, int e, bool t, double p) {
         nombre = n;
         nombrecientifico = nc;
@@ -19,6 +21,8 @@ class PlantaInfo {
         toxica = t;
         precio = p;
     }
+
+    // Getters
     string getNombre() {
         return nombre;
     }
@@ -34,6 +38,8 @@ class PlantaInfo {
     double getPrecio() {
         return precio;
     }
+
+    // Setters
     void setNombre(string n) {
         nombre = n;
     }
@@ -50,6 +56,7 @@ class PlantaInfo {
         precio = p;
     }
     
+    // Mostrar los datos
     void mostrarInfo() {
         cout << "\nNombre: " << nombre << endl;
         cout << "Nombre científico: " << nombrecientifico << endl;
@@ -60,4 +67,4 @@ class PlantaInfo {
 
 };
 
-#endif
+#endif  
