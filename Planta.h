@@ -4,8 +4,7 @@
 #include "PlantaInfo.h"
 #include "PlantaCuidados.h"
 
-class Planta
-{
+class Planta {
 private:
     PlantaInfo info;
     PlantaCuidados cuidados;
@@ -15,3 +14,4 @@ public:
 };
 
 #endif
+
