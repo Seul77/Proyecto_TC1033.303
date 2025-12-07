@@ -6,10 +6,10 @@ using namespace std;
 #include "CactusCuidados.h"
 #include "FlorInfo.h"
 #include "FlorCuidados.h"
-
+#include "Planta.h"
 int main() {
+    
     int tipoPlanta = 0;
-
     Carnivora plantaCarnivora1("Venus atrapamoscas", "Dionaea muscipula", 3, false, 299.99, "Trampa de mandíbula");
     Carnivora plantaCarnivora2("Rocio del sol", "Drosera capensis", 2, false, 150.00, "Trampa pegajosa");
     Carnivora plantaCarnivora3("Planta jarro", "Nepenthes alata", 4, false, 450.50, "Trampa de jarra");
@@ -32,7 +32,7 @@ int main() {
     FlorCuidados cuidadosFlor2(5, "Sustrato bien drenado", 18.0, "Medio", false, true);
     FlorCuidados cuidadosFlor3(6, "Tierra fértil", 22.0, "Alto", true, false);
     FlorCuidados cuidadosFlor4(4, "Mezcla para orquídeas", 24.0, "Bajo", true, false);
-
+    
     cout << "Bienvenido al sistema de gestión de invernadero, ¿qué planta desea consultar? (ingrese el numero)\n"
         << "1. Planta carnívora\n"
         << "2. Cactus\n"
