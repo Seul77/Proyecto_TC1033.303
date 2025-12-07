@@ -1,19 +1,24 @@
-#ifndef PLANTACUIDADOS_H
+#ifndef PLANTACUIDADOS_H        
 #define PLANTACUIDADOS_H
 #include <iostream>
 using namespace std;
 
+// Clase base PlantaCuidados
 class PlantaCuidados {
-    protected: 
-    int riegoPorSemana;
-    string tipoTierra;
-    float temperaturaOptima;
+    protected:         // Atributos accesibles por clases hijas
+    int riegoPorSemana;      // Cantidad de veces que se riega a la semana
+    string tipoTierra;       // Tipo de tierra que requiere
+    float temperaturaOptima; // Temperatura ideal para la planta
+
     public:
+    // Constructor que inicializa los atributos
     PlantaCuidados(int r, string t, float temp) {
         riegoPorSemana = r;
         tipoTierra = t;
         temperaturaOptima = temp;
     }
+
+    // Getters
     int getRiegoPorSemana() {
         return riegoPorSemana;
     }
@@ -23,6 +28,8 @@ class PlantaCuidados {
     float getTemperaturaOptima() {
         return temperaturaOptima;
     }
+
+    // Setters
     void setRiegoPorSemana(int r) {
         riegoPorSemana = r;
     }
@@ -33,6 +40,7 @@ class PlantaCuidados {
         temperaturaOptima = temp;
     }
 
+    // Mostrar información de cuidados
     void mostrarCuidados() {
         cout << "- Riego por semana: " << riegoPorSemana << " veces\n";
         cout << "- Tipo de tierra: " << tipoTierra << endl;
@@ -40,4 +48,4 @@ class PlantaCuidados {
     }
 };
 
-#endif
+#endif 
